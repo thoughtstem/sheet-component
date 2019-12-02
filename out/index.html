@@ -1,0 +1,30 @@
+<html><head><link rel="stylesheet" type="text/css" href="/jexcel.css" /><link rel="stylesheet" type="text/css" href="/jsuites.css" /><script src="/jsuites.js"></script><script src="/jexcel.js"></script><link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" /></head><body><script src="/js/jquery-3.4.1.min.js"></script><script src="/js/moment.min.js"></script><div id="sheet"></div><script>
+//<![CDATA[
+window.ns868_data2=[ 
+   [ 'Cheese', 10, 1.10, '=B1*C1'], 
+   [ 'Apples', 30, 0.40, '=B2*C2'], 
+   [ 'Carrots', 15, 0.45, '=B3*C3'], 
+   [ 'Oranges', 20, 0.49, '=B4*C4'], 
+   ];
+window.ns868_table=jexcel(document.getElementById('sheet'), 
+                                { 
+                                 data:  window.ns868_data2 , 
+                                 colHeaders: [ 'Product', 'Quantity', 'Price', 'Total' ], 
+                                 colWidths: [ 300, 100, 100, 100 ], 
+                                 columns: [ 
+                                           { type: 'autocomplete', source:[ 'Apples','Bananas','Carrots','Oranges','Cheese','Pears' ] }, 
+                                           { type: 'number' }, 
+                                           { type: 'number' }, 
+                                           { type: 'number' }, 
+                                           ], 
+                                 rowResize:true, 
+                                 });
+
+//]]>
+</script><script src="/js/bootstrap.bundle.min.js"></script><script>
+//<![CDATA[
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+//]]>
+</script><script src="/js/font-awesome.js"></script></body></html>
